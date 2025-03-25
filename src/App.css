@@ -1,0 +1,148 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #e3f2fd); /* Light gradient */
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Centered Container */
+#webcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Glassmorphism Effect */
+.container {
+  max-width: 800px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px); /* Glass effect */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* Upload Section */
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px dashed #3498db;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.upload-box:hover {
+  border-color: #2980b9;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3);
+}
+
+input[type="file"] {
+  display: block;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+}
+
+/* OCR Results Section */
+.ocr-results {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 12px;
+  min-height: 150px;
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.ocr-results:hover {
+  box-shadow: 0 8px 16px rgba(241, 196, 15, 0.3);
+  transform: scale(1.02);
+}
+
+/* Buttons */
+button {
+  border: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2980b9, #2471a3);
+  transform: scale(1.08);
+  box-shadow: 0 6px 12px rgba(41, 128, 185, 0.4);
+}
+
+button:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Grid Layout for Sections */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}
